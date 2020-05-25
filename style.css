@@ -1,0 +1,100 @@
+/*Importando a fonte escolhida  do google fonts*/
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+/*colocando border box, para todos os divs terem o padding calculado*/
+ *{
+ box-sizing: border-box;
+}
+
+/*tira a margem automática de 8px do body, e declara a fonte do google fonts*/
+body{
+  margin:0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+/*display flex faz tudo da ul ficar na mesma linha*/
+header nav ul{
+  list-style: none;
+  display: flex;
+}
+
+/*a margem é declarada assim: margin: up-down left-right; neste caso tem 15px dos lados*/
+header nav ul li{
+  margin: 0 15px;
+}
+
+/*agora tudo o que está no nav tbm fica na mesma linha, e o space between foi feito para espaçar o nav da ul*/
+header nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+/*o que está escrito no nav ficará com a versão bold da fonte escolhida*/
+header nav p{
+  font-weight: bold;
+}
+
+/*calc calcula a altura inteira (100vh) menos 150px*/
+header{
+  height: calc(100vh - 150px);
+  background:no-repeat center/cover url('header-image.jpg');
+}
+
+.header-content{
+    margin: 150px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.header-content h1{
+  margin:0px;
+  text-shadow: #E7792F 0.1em 0.1em 0.2em;
+}
+
+.header-content p{
+  text-shadow: black 0.2em 0.2em 0.3em;
+}
+
+button{
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 0;
+    color: #E7792F;
+    background:white;
+}
+
+/*RESPONSIVIDADE*/
+@media(max-width:767px){
+
+}
+
+@media(max-width:480px){
+  body{
+    height: calc(100vh - 50px);
+  }
+  header nav ul{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:0;
+    background: #616984;
+    height: 50px;
+    margin:0;
+    justify-content: space-between;
+    display:flex;
+    align-items: center;
+    font-weight:bold;
+  }
+  header nav p{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.pacotes{
+  height:500px;
+}
