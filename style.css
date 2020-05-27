@@ -57,13 +57,20 @@ header{
   text-shadow: black 0.2em 0.2em 0.3em;
 }
 
-button{
+.header-content button{
     padding: 10px 15px;
     border-radius: 12px;
     font-weight: bold;
     border: 0;
     color: #E7792F;
     background:white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header-content button:hover{ /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
 }
 
 /*RESPONSIVIDADE*/
@@ -73,7 +80,8 @@ button{
 
 @media(max-width:480px){
   body{
-    height: calc(100vh - 50px);
+    /*height: calc(100vh - 50px); calcula a altura usando o tamanho todo do body - 50px*/
+    margin-bottom: 55px;
   }
   header nav ul{
     position: fixed;
@@ -85,9 +93,10 @@ button{
     height: 50px;
     margin:0;
     justify-content: space-between;
-    display:flex;
+    display:flex; /* faz os itens ficarem na mesma linha */
     align-items: center;
     font-weight:bold;
+    z-index: 99;
   }
   header nav p{
     width: 100%;
@@ -96,5 +105,134 @@ button{
 }
 
 .pacotes{
-  height:500px;
+  background:#E8E3E8;
+  padding: 15px;
+}
+
+.pacotes h1{
+  margin:auto;
+  text-align: center;
+  color: #477F99;
+  width:100%; */para ocupar a largura da tela*/
+  text-shadow: #214763 0.04em 0.04em 0.04em;
+}
+
+.pacotes .pacotes-div{
+    display: flex;
+    margin:auto;
+    max-width: 950px;
+    justify-content: center;
+    flex-wrap:wrap; /*quebra os itens conforme a tela for diminuindo*/
+}
+
+.pacotes .card {
+  height: 350px;
+  width: 250px;
+  background: white;
+  border-radius: 15px 0;
+  color: #20432B;
+  margin: 25px 25px;
+  position: relative; /*quando usamos position absolute na .card-tag, ela deve ser relativa a .card, para ficar em cima da imagem. Por isso no .card usamos position relative*/
+  justify-content: center;
+}
+
+.pacotes .img-card{
+  height: 200px;
+  width: 250px;
+  border-radius: 15px 0;
+}
+
+.pacotes .card .card-content{
+  text-align: center;
+  padding: 0 15px;
+}
+
+.pacotes .card .card-content h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.2rem;
+  color: #20432B;
+}
+
+.pacotes .card .card-content ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.pacotes .card .card-content ul li{
+  font-size: .8rem;
+  display:flex;
+  align-items: center;
+  text-align: left;
+}
+
+.pacotes .card .card-content li svg{
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.pacotes .card .card-tag-top{
+  position: absolute; /*faz ficar por cima da imagem*/
+  right: 0; /*deixa a tag à direita da imagem*/
+  background:#C84630;
+  color: white;
+  margin-top: 15px;
+  padding: 2.5px 10px;
+  border-radius: 10px 0 0 10px;
+  height: 25px;
+  width: 97px;
+  text-shadow: #20432B 0.04em 0.04em 0.06em;
+}
+
+.pacotes .card .card-tag-top p{
+    vertical-align: middle;
+    margin: 0;
+    font-size: .9rem;
+    align: center;
+    text-align: center;
+}
+
+.pacotes .card .card-tag-bottom{
+  position: absolute; /*faz ficar por cima da imagem*/
+  left: 0; /*deixa a tag à direita da imagem*/
+  background:#477F99;
+  color: white;
+  margin-top: 160px;
+  padding: 2.5px 10px;
+  border-radius: 0 10px 10px 0;
+  height: 25px;
+  width: 80px;
+  text-shadow: #20432B 0.04em 0.04em 0.06em;
+}
+
+.pacotes .card .card-tag-bottom p{
+    vertical-align: middle;
+    margin: 0;
+    font-size: .9rem;
+    align: center;
+    text-align: left;
+}
+
+.pacotes .card .card-tag-top-wit{
+  position: absolute; /*faz ficar por cima da imagem*/
+  right: 0; /*deixa a tag à direita da imagem*/
+  background:#20432B;
+  color: white;
+  margin-top: 15px;
+  padding: 2.5px 10px;
+  border-radius: 10px 0 0 10px;
+  height: 25px;
+  width: 97px;
+  text-shadow: #20432B 0.04em 0.04em 0.06em;
+}
+
+.pacotes .card .card-tag-top-wit p{
+    vertical-align: middle;
+    margin: 0;
+    font-size: .9rem;
+    align: center;
+    text-align: center;
 }
