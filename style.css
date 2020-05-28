@@ -6,13 +6,17 @@
  box-sizing: border-box;
 }
 
+html{scroll-behavior:smooth !important}
 /*tira a margem automática de 8px do body, e declara a fonte do google fonts*/
 body{
   margin:0;
   font-family: 'Quicksand', sans-serif;
   color: white;
 }
-
+a{
+  text-decoration: none; /*tira o azul sublinhado dos links*/
+  color:inherit;
+}
 /*display flex faz tudo da ul ficar na mesma linha*/
 header nav ul{
   list-style: none;
@@ -71,37 +75,6 @@ header{
   background: #477F99;
   color: white;
   cursor: pointer;
-}
-
-/*RESPONSIVIDADE*/
-@media(max-width:767px){
-
-}
-
-@media(max-width:480px){
-  body{
-    /*height: calc(100vh - 50px); calcula a altura usando o tamanho todo do body - 50px*/
-    margin-bottom: 55px;
-  }
-  header nav ul{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding:0;
-    background: #616984;
-    height: 50px;
-    margin:0;
-    justify-content: space-between;
-    display:flex; /* faz os itens ficarem na mesma linha */
-    align-items: center;
-    font-weight:bold;
-    z-index: 99;
-  }
-  header nav p{
-    width: 100%;
-    text-align: center;
-  }
 }
 
 .pacotes{
@@ -300,21 +273,16 @@ header{
 .servicos .servicos-div .card:hover h1 { /*troca as coisas qndo o mouse passa*/
   background: #477F99;
   color: white;
-  cursor: pointer;
-
 }
 
 .servicos .servicos-div .card:hover p { /*troca as coisas qndo o mouse passa*/
   background: #477F99;
   color: white;
-  cursor: pointer;
-
 }
 
 .servicos .servicos-div .card:hover { /*troca as coisas qndo o mouse passa*/
   background: #477F99;
   color: white;
-  cursor: pointer;
 }
 
 .servicos .card h1 svg:hover{
@@ -322,9 +290,179 @@ header{
   /*transition: all 1s;faz a transição de cores mais lenta*/
 }
 
-.contato
+.contato{
+    padding:60px 20%;
+    background:#E8E3E8;
+    position: relative;
+}
+
+.contato .contato-card{
+  width:300px;
+  height:200px;
+  background:white;
+  position: absolute;
+  z-index: 99; /*é a preferência do que fica por cima, o maior fica em cima do menor*/
+  top: calc(50% - 100px); /*como tem 300 de altura, pega metade da metade para ficar no meio*/
+  left: calc(20% - 150px);
+  color: #20432B;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius:8px;
+}
+
+.contato .contato-card ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 15px auto;
+
+}
+
+.contato .contato-card ul li{
+  font-size: .8rem;
+  display:flex;
+  justify-content: left;
+  margin-top: 10px;
+}
+
+.contato .contato-card li svg{
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.contato .contato-card h1{
+  margin-top:25px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: #20432B;
+}
+
+.contato-botao button{
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #E7792F;
+    background:white;
+    font-family: 'Quicksand', sans-serif;
+    border:0;
+}
+
+.contato-botao button:hover{ /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
+}
+
+.field{
+  color:#20432B;
+  background:#E8E3E8;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.field .field-card{
+  width:300px;
+  height:350px;
+  background:white;
+  color: #20432B;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius:8px;
+  margin:auto;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.field h1{
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.field ul{
+  color:#20432B;
+  margin:auto;
+  list-style: none;
+  padding: 0;
+}
+
+.field ul li{
+  padding:5px;
+  text-align: left;
+}
+
+.field .field-card .msg {
+height: 100px;
+width:250px;
+}
+
+.contato-enviar{
+  text-align: center;
+  padding: 0;
+}
+
+.contato-enviar button{
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #E7792F;
+  background:white;
+  font-family: 'Quicksand', sans-serif;
+  border:0;
+  font-size: .8rem;
+}
+
+.contato-enviar button:hover{ /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
+}
   #map {
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
-}
+
+       /*RESPONSIVIDADE!!! Sempre fica abaixo dos outros elementos*/
+      @media(max-width:767px){
+
+       }
+
+       @media(max-width:480px){
+         body{
+           /*height: calc(100vh - 50px); calcula a altura usando o tamanho todo do body - 50px*/
+           margin-bottom: 55px;
+         }
+         header nav ul{
+           position: fixed;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           padding:0;
+           background: #616984;
+           height: 50px;
+           margin:0;
+           justify-content: space-between;
+           display:flex; /* faz os itens ficarem na mesma linha */
+           align-items: center;
+           font-weight:bold;
+           z-index: 99;
+         }
+         header nav p{
+           width: 100%;
+           text-align: center;
+         }
+         .contato{
+           padding:15px 0;
+         }
+
+         .contato .contato-card{
+           position:static; /*faz ele ficar como um div normal, posicionado antes do mapa*/
+           margin:40px auto;
+         }
+       }
