@@ -147,6 +147,15 @@ header{
   padding: 0 15px;
 }
 
+.pacotes .card:hover {
+    cursor: pointer;
+    transform: scale(1.1); /*faz ficar maior quando passa o mouse*/
+  }
+
+.pacotes .card .card-content:hover h1{
+  cursor: pointer;
+}
+
 .pacotes .card .card-content h1{
   margin-top: 0px;
   margin-bottom: 0px;
@@ -235,4 +244,87 @@ header{
     font-size: .9rem;
     align: center;
     text-align: center;
+}
+
+.servicos{
+  background:#E8E3E8;
+  padding: 15px;
+}
+
+.servicos h1{
+  margin:auto;
+  text-align: center;
+  color: #477F99;
+  width:100%; */para ocupar a largura da tela*/
+  text-shadow: #214763 0.04em 0.04em 0.04em;
+
+}
+
+.servicos .servicos-div{
+    display: flex;
+    margin:auto;
+    max-width: 950px;
+    justify-content: center;
+    flex-wrap:wrap; /*quebra os itens conforme a tela for diminuindo*/
+}
+
+.servicos .card {
+    height: 130px;
+    width: 130px;
+    background: white;
+    /* border-radius: 15px 0; */
+    color: #20432B;
+    margin: 15px 15px;
+    position: relative;
+    justify-content: center;
+}
+.servicos .card h1 svg{
+  width: 30px;
+  height: 30px;
+  align: center;
+}
+.servicos .servicos-div .card h1{
+  color: #20432B;
+  text-align: center;
+  margin: 10px auto 5px auto;
+  font-size: .9rem;
+}
+
+.servicos .servicos-div .card p{
+  color: #20432B;
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: .8rem;
+}
+
+.servicos .servicos-div .card:hover h1 { /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
+
+}
+
+.servicos .servicos-div .card:hover p { /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
+
+}
+
+.servicos .servicos-div .card:hover { /*troca as coisas qndo o mouse passa*/
+  background: #477F99;
+  color: white;
+  cursor: pointer;
+}
+
+.servicos .card h1 svg:hover{
+  transform: scale(1.1);
+  /*transition: all 1s;faz a transição de cores mais lenta*/
+}
+
+.contato
+  #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
 }
