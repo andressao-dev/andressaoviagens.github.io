@@ -7,6 +7,21 @@
   <title>Andressão Viagens</title>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+  function contato() {
+    if (document.getElementById("email").value == "") {
+      alert ("Por favor, diga-nos seu email.");
+    }
+    else {
+      if (document.getElementById("mensagem").value == ""){
+        alert ("Escreva sua mensagem, por gentileza.");
+      }
+    else {
+      alert ("Obrigada por entrar em contato, " + document.getElementById("email").value + "! Responderemos em breve.");
+    }
+  }
+  }
+  </script>
 </head>
 
 <body>
@@ -15,40 +30,43 @@
       <nav>
         <p> Andressão Viagens </p>
         <ul>
-          <li>Home</li>
-          <li>Pacotes</li>
-          <li>Serviços</li>
-          <li>Contato</li>
+          <li><a href=#home>Home</a></li>
+          <li><a href=#pacotes>Pacotes</a></li>
+          <li><a href=#servicos>Serviços</a></li>
+          <li><a href=#contato>Contato</a></li>
         </ul>
       </nav>
 
-      <div class= "header-content">
+      <div id="home" class= "header-content">
         <h1>Vernazza, Itália</h1>
         <p>Você diz pra onde, e a gente te leva</p>
-        <button>Venha conosco!</button>
+        <button><a href=#contato-click>Venha conosco!</a></button>
       </div>
     </header>
 
-    <section class="pacotes">
+    <section id="pacotes" class="pacotes">
       <h1> Conheça os pacotes pensados para você! </h1>
-      <div class="pacotes-div">
-        <div class = "card">
-        <div class = "card-tag-top">
-          <p>Imperdível !</p>
-        </div>
-          <div class = "card-tag-bottom">
-            <p>R$ 2.399</p>
+      <div class="pacotes-div" >
+        <a href= #enviar>
+          <div class = "card">
+          <div class = "card-tag-top">
+            <p>Imperdível !</p>
           </div>
-        <img class="img-card" src="santiago.jpg">
-        <div class="card-content">
-          <h1> 7 noites em Santiago, Chile </h1>
-          <ul>
-          <li><i data-feather="coffee"></i> Café da manhã incluso </li>
-          <li><i data-feather="chevrons-up"></i> Passeios nas melhores vinícolas </li>
-          <li><i data-feather="map"></i> Guias turísticos locais </li>
-          </ul>
+            <div class = "card-tag-bottom">
+              <p>R$ 2.399</p>
+            </div>
+          <img class="img-card" src="santiago.jpg">
+          <div class="card-content">
+            <h1> 7 noites em Santiago, Chile </h1>
+            <ul>
+            <li><i data-feather="coffee"></i> Café da manhã incluso </li>
+            <li><i data-feather="chevrons-up"></i> Passeios nas melhores vinícolas </li>
+            <li><i data-feather="map"></i> Guias turísticos locais </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </a>
+      <a href= #enviar>
         <div class = "card">
         <div class = "card-tag-top-wit">
           <p>Romântico</p>
@@ -66,6 +84,8 @@
           </ul>
         </div>
       </div>
+    </a>
+    <a href= #enviar>
         <div class = "card">
         <!--<div class = "card-tag-top">
           <p>Imperdível !</p>
@@ -83,6 +103,7 @@
           </ul>
         </div>
       </div>
+    </a>
         <!--<div class = "card">
         <div class = "card-tag-top">
           <p>Imperdível !</p>
@@ -137,7 +158,7 @@
     </div>
     </section>
 
-    <section class="servicos">
+    <section id = "servicos" class="servicos">
       <h1> Nossos melhores serviços </h1>
       <div class="servicos-div">
         <div class ="card">
@@ -168,7 +189,18 @@
       </div>
     </section>
 
-    <section class="contato">
+    <section id="contato" class="contato">
+      <div class="contato-card">
+        <h1>Queremos falar com você!</h1>
+        <ul>
+        <li><i data-feather="map-pin"></i> Avenida sete de setembro, 1469 </li>
+        <li><i data-feather="phone"></i> (41)99876-5432 </li>
+        <li><i data-feather="mail"></i> andressaoviagens@gmail.com </li>
+      </ul>
+        <div class="contato-botao">
+          <button id="contato-click"><a href= #enviar> Entre em contato</a> </button>
+        </div>
+      </div>
       <div id="map"></div>
       <script>
         // Initialize and add the map
@@ -195,5 +227,19 @@
   <script>
       feather.replace()
     </script>
+
+    <section id="enviar" class="field">
+      <div class="field-card">
+        <h1> Entre em contato agora mesmo!</h1>
+        <ul>
+        <li>Nome: <input type="text" id="nome" name="nome" value=""/></li>
+        <li>Email: <input type="text" id="email" name="email" value=""/></li>
+        <li>Telefone: <input type="text" id="telefone" name="telefone" value=""/></li>
+        <li>Sua mensagem:<br> <input type="text" id="mensagem" name="mensagem" value="" class="msg"/></li>
+        <div class="contato-enviar">
+          <button onclick="contato()" >Enviar</button>
+        </div>
+    </div>
+    </section>
 </body>
 </html>
